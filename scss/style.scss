@@ -1,0 +1,36 @@
+$base-color: rgb(247, 247, 247);
+$button-color: rgb(0, 81, 255);
+
+body {
+    margin: 0 auto;
+    background-color: $base-color;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10rem;
+    padding-right: 10rem;
+    height: 50px;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    
+    .button {
+            height: 2.2rem;
+            width: 5rem;
+            background-color: $button-color;
+            color: #fff;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+    }
+    li {
+        list-style: none;
+    }
+    
+}
