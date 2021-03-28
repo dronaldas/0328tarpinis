@@ -15,6 +15,7 @@ $main-text-color: rgb(15, 15, 15);
     display: flex;
     justify-content: center;
     align-items: center;
+    white-space: nowrap;
     @include transition();
 
             a {
@@ -62,9 +63,9 @@ body {
 
 // page styles starts here
 header {
+    
     nav {
         display: flex;
-        justify-content: space-between;
         align-items: center;
         height: 3.125rem;
         width: 100%;
@@ -81,10 +82,21 @@ header {
                 color: $button-color-hover;
             }
         }
-        ul, .button {
-            margin-left: 13rem;
-            margin-right: 13rem;
+        ul {
+            padding: 0;
         }
+        .button {
+            position: absolute;
+            right: 15%;
+        }
+        ul {
+            position: absolute;
+            left: 15%;
+        }
+        // ul, .button {
+        //     margin-left: 13rem;
+        //     margin-right: 13rem;
+        // }
 
         .button {
             @include button();
@@ -127,6 +139,9 @@ header {
     // cover text
     .cover_text {
         width: 45%;
+        @media screen and (max-width: 800px) {
+            width: 65%;
+          }
     
         h2 {
             text-align: center;
