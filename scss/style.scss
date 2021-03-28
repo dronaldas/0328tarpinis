@@ -1,4 +1,4 @@
-$base-color: rgb(247, 247, 247);
+$base-color: #ececec;
 $button-color: rgb(0, 81, 255);
 $button-color-hover: #0034a5;
 $main-text-color: rgb(15, 15, 15);
@@ -40,6 +40,8 @@ body {
     display: flex;
     .container_childs {
         flex-grow: 1;
+        // border: 2px solid red;
+
     }
 }
 
@@ -50,8 +52,6 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        // padding-left: 10rem;
-        // padding-right: 10rem;
         height: 3.125rem;
         width: 100%;
         background-color: #fff;
@@ -131,7 +131,7 @@ header {
         }
         .button {
             @include button();
-            margin-left: 2rem;
+            margin-left: 0.5rem;
             padding-left: 2rem;
             padding-right: 2rem;
         }
@@ -141,9 +141,123 @@ header {
     // header end
 
     // main starts
+main {
 
-    .kubas {
-        width: 5rem;
-        height: 15rem;
-        background-color: $button-color-hover;
+
+    .container {
+        width: 100%;
+        height: 30rem;
+        position: relative;
+        display: flex;
     }
+    .container_childs {
+        flex-basis: 50%;
+        flex-grow: 1;
+    }
+    .white_bg {
+        display: flex;
+        background-color: #fff;
+    }
+    .row2_image {
+        background-image: url('images/bg-showcase-1.jpg');
+        background-position: center center;
+        background-size: cover;
+    }
+    .text {
+        justify-content: center;
+        align-self: center;
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+
+    .container.row {
+       max-width: 70rem;
+       margin: 0 auto;
+    }
+    .row .container_childs {
+        display: flex;
+        flex-direction: column;   
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h3 {
+            font-size: 1.6rem;
+            margin: 0;
+        }
+        
+        p {
+            max-width: 15rem;
+            color: rgb(78, 78, 78);
+            
+        }
+       }
+
+    i {
+        color: $button-color;
+        margin-bottom: 1rem;
+    }
+    .row3 {
+        flex-direction: row-reverse;
+        .row3_image{
+        background: url('images/bg-showcase-2.jpg');
+        }
+    }
+    .row4_image {
+        background: url('images/bg-showcase-3.jpg');
+    }
+    .row_testimonials {
+        .container_childs {
+        img {
+            width: 12rem;
+            height: 12rem;
+            border-radius: 50%;
+            box-shadow: 1px 5px 8px black;
+            margin-bottom: 2rem;
+        }
+        }
+    }
+    .from_header 
+        .container_cover {
+            width: 100%;
+            height: 15rem;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .cover_image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1000;
+    
+        }
+        // cover text
+        .cover_text {
+            width: 45%;
+        
+            h3 {
+                text-align: center;
+                color: #fff;
+                font-size: 1.8rem;
+            }
+            form {
+                display: flex;
+                justify-content: center;
+                input {
+                    width: 25rem;
+        
+                }
+                .button {
+                    @include button();
+                    margin-left: 0.5rem;
+                    padding-left: 2rem;
+                    padding-right: 2rem;
+                }
+            }
+
+    }
+
+}
