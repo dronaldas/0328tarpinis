@@ -247,49 +247,86 @@ main {
     }
 
     // before footer. header repeats
-    .from_header 
-        .container_cover {
-            width: 100%;
-            height: 15rem;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .cover_image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            z-index: -1000;
     
-        }
-        // cover text
-        .cover_text {
-            width: 45%;
-        
-            h3 {
-                text-align: center;
-                color: #fff;
-                font-size: 1.8rem;
-                margin-bottom: 1rem;
-            }
-            form {
-                display: flex;
-                justify-content: center;
-                input {
-                    width: 25rem;
-        
-                }
-                .button {
-                    @include button();
-                    margin-left: 0.5rem;
-                    padding-left: 2rem;
-                    padding-right: 2rem;
-                }
-            }
+    .container_cover {
+        width: 100%;
+        height: 15rem;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cover_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1000;
 
     }
-    // header repeats ends
+    // cover text
+    .cover_text {
+        width: 45%;
+    
+        h3 {
+            text-align: center;
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            input {
+                width: 25rem;
+    
+            }
+            .button {
+                @include button();
+                margin-left: 0.5rem;
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        }
+    }
+}
 
+    // header repeats ends
+    //footer starts
+footer {
+    height: 8rem;
+    display: flex;
+    background: #fff;
+
+    .container_footer {
+        flex-grow: 1;
+        align-items: center;
+        .container_childs {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+    .footer_left {
+        // margin-left: 10rem;
+        ul {
+            padding: 0;
+
+            li {
+                display: inline-block;
+
+                a {
+                    padding-right: 1rem;
+                    text-decoration: none;
+                    
+                }
+            }
+        }
+    }
+    .footer_right{
+        a {
+            padding-right: 1rem;
+            color: $button-color;
+        }
+    }
 }
